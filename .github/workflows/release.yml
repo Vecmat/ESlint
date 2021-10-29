@@ -19,9 +19,6 @@ jobs:
               with:
                   node-version: "14.x"
                   registry-url: https://registry.npmjs.org/
-
-            - name: Install & Build
-              run: yarn setup
             - name: publish
               run: |
                   cd ./eslint-config-basic/ && npm publish --access public && cd ..
