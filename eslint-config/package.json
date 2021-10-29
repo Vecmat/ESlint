@@ -1,0 +1,25 @@
+{
+    "name": "@vecmat/eslint-config",
+    "version": "0.0.1",
+    "description": "",
+    "keywords": [],
+    "license": "MIT",
+    "author": "Hanrea",
+    "files": [
+        "index.js"
+    ],
+    "main": "index.js",
+    "peerDependencies": {
+        "eslint": ">=7.4.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "dependencies": {
+        "@vecmat/eslint-config-react": "0.3.0",
+        "@vecmat/eslint-config-vue": "0.3.0"
+    },
+    "devDependencies": {
+        "eslint": "^8.0.1"
+    }
+}
