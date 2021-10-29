@@ -21,10 +21,9 @@ jobs:
                   registry-url: https://registry.npmjs.org/
             - name: publish
               run: |
-                  ls ./ 
                   cd ./eslint-config-ts/ && npm publish --access public && cd ..
                   cd ./eslint-config-vue/ && npm publish --access public && cd ..
                   cd ./eslint-config-basic/ && npm publish --access public && cd ..
                   cd ./eslint-config-react/ && npm publish --access public && cd ..
               env:
-                  NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+                  NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
