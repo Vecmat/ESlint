@@ -17,10 +17,13 @@ jobs:
             - name: Use Node.js 14.x
               uses: actions/setup-node@v2
               with:
+                  scope: "@vecmat"
                   node-version: "14.x"
                   registry-url: https://registry.npmjs.org/
             - name: publish
               run: |
+                  npm who am i
+
                   cd ./eslint-config-ts/ && npm publish --access public && cd ..
                   cd ./eslint-config-vue/ && npm publish --access public && cd ..
                   cd ./eslint-config-basic/ && npm publish --access public && cd ..
