@@ -22,10 +22,8 @@ jobs:
                   registry-url: https://registry.npmjs.org/
             - name: publish
               run: |
-                  echo '${{ secrets.NPM_TOKEN }}' ;
                   cd ./eslint-config-ts/ ;
                   echo '//npmjs.com/:_authToken=${{ secrets.NPM_TOKEN }}' > .npmrc  ;
-                  cat .npmrc ;
                   npm publish --access public && cd ..
                   cd ./eslint-config-vue/ ;
                   echo '//npmjs.com/:_authToken=${{ secrets.NPM_TOKEN }}' > .npmrc  ;
