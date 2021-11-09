@@ -22,7 +22,7 @@ module.exports = {
             files: ["*.json", "*.json5"],
             parser: "jsonc-eslint-parser",
             rules: {
-                quotes: ["error", "double"],
+                "quotes": ["error", "double"],
                 "quote-props": ["error", "always"],
                 "comma-dangle": ["error", "never"],
             },
@@ -92,7 +92,7 @@ module.exports = {
         },
     ],
     rules: {
-        // import
+    // import
         "import/order": [
             "error",
             {
@@ -113,19 +113,25 @@ module.exports = {
         "import/no-absolute-path": "off",
 
         // Common
-        semi: ["error", "always"],
-        curly: ["error", "multi-or-nest", "consistent"],
-        quotes: ["error", "double"],
+        "semi": ["error", "always"],
+        "curly": ["error", "multi-or-nest", "consistent"],
+        "quotes": ["error", "double"],
         "quote-props": ["error", "consistent-as-needed"],
         "no-unused-vars": "warn",
         "no-param-reassign": "off",
         "array-bracket-spacing": ["error", "never"],
+        "comma-dangle": ["error", {
+            arrays: "never",
+            objects: "always",
+            imports: "never",
+            exports: "never",
+            functions: "never",
+        }],
         "brace-style": ["error", "1tbs", { allowSingleLine: true }],
         "block-spacing": ["error", "always"],
-        camelcase: "off",
+        "camelcase": "off",
         "comma-spacing": ["error", { before: false, after: true }],
         "comma-style": ["error", "last"],
-        "comma-dangle": ["error", "always-multiline"],
         "no-constant-condition": "warn",
         "no-debugger": "error",
         "no-console": "error",
@@ -133,7 +139,7 @@ module.exports = {
         "no-tabs": "error",
         "func-call-spacing": ["off", "never"],
         "key-spacing": ["error", { beforeColon: false, afterColon: true }],
-        indent: ["error", 4, { SwitchCase: 2, VariableDeclarator: 2, outerIIFEBody: 2 }],
+        "indent": ["error", 4, { SwitchCase: 2, VariableDeclarator: 2, outerIIFEBody: 2 }],
         "no-restricted-syntax": ["error", "DebuggerStatement", "ForInStatement", "LabeledStatement", "WithStatement"],
         "object-curly-spacing": ["error", "always"],
         "no-return-await": "off",
@@ -174,8 +180,8 @@ module.exports = {
         "array-callback-return": "error",
         "block-scoped-var": "error",
         "consistent-return": "off",
-        complexity: ["off", 11],
-        eqeqeq: ["error", "smart"],
+        "complexity": ["off", 11],
+        "eqeqeq": ["error", "smart"],
         "no-alert": "warn",
         "no-case-declarations": "error",
         "no-multi-spaces": "error",

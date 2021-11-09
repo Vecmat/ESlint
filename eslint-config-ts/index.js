@@ -5,17 +5,17 @@ module.exports = {
     extends: ["@vecmat/eslint-config-basic", "plugin:@typescript-eslint/recommended"],
     overrides: basic.overrides,
     rules: {
-        // Disable bug rules
+    // Disable bug rules
         "import/named": "off",
 
         // TS
         "no-useless-constructor": "off",
-        "@typescript-eslint/semi": ["error", "never"],
-        "@typescript-eslint/member-delimiter-style": ["error", { multiline: { delimiter: "none" } }],
+        "@typescript-eslint/semi": ["error", "always"],
+        "@typescript-eslint/member-delimiter-style": ["error", { multiline: { delimiter: "always", }, }],
         "@typescript-eslint/type-annotation-spacing": ["error", {}],
 
-        indent: "off",
-        "@typescript-eslint/indent": ["error", 2],
+        "indent": ["error", 4, { SwitchCase: 2, VariableDeclarator: 2, outerIIFEBody: 2, }],
+        "@typescript-eslint/indent": ["error", 4, { SwitchCase: 2, VariableDeclarator: 2, outerIIFEBody: 2, }],
         "no-unused-vars": "off",
         "@typescript-eslint/no-unused-vars": "error",
         "no-redeclare": "off",
