@@ -1,6 +1,6 @@
 {
     "name": "@vecmat/eslint-config-react",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "description": "",
     "keywords": [],
     "license": "MIT",
@@ -16,7 +16,7 @@
         "access": "public"
     },
     "dependencies": {
-        "@vecmat/eslint-config-ts": "^0.1.3",
+        "@vecmat/eslint-config-ts": "^0.1.4",
         "eslint-plugin-react": "^7.26.1"
     },
     "devDependencies": {
